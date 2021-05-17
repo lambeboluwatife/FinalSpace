@@ -4,14 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Everything to know about Final Space"
-    />
-    <meta
-      name="keywords"
-      content="application, HTML, CSS, JS, API"
-    />
+    <meta name="description" content="Everything to know about Final Space" />
+    <meta name="keywords" content="application, HTML, CSS, JS, API" />
     <meta name="author" content="Lambe Boluwatife" />
     <title>Final Space</title>
     <link rel="stylesheet" href="css/style.css" />
@@ -48,7 +42,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#characters">Characters</a></li>
-            <li><a href="#location">Location</a></li>
+            <li><a href="#locations">Location</a></li>
             <li><a href="#quotes">Quotes</a></li>
           </ul>
         </nav>
@@ -263,10 +257,38 @@
         </div>
       </div>
     </section>
-    <!-- <button class="btn" type="submit">Click</button>
 
-    <div class="output"></div> -->
     <br />
+    <center><hr class="hr" /></center>
+
+    <div class="form text-center">
+      <form class="form-content">
+        <h5>Search Character</h5>
+        <input id="input" type="text" required placeholder="Enter Character" />
+        <div class="alert text-center"></div>
+        <center>
+          <button class="btn" type="button" name="button">Search</button>
+        </center>
+      </form>
+    </div>
+
+    <section class="search my-1">
+      <div class="container">
+       <center> <div class="search-img text-center"></div></center>
+      </div>
+    </section>
+
+    <br />
+
+    <center><hr /></center>
+
+    <!-- Locations -->
+    <section class="locations" id="locations">
+      <div class="container">
+        <h2 class="characters-heading text-center">Locations</h2>
+        <div class="grid grid-4 text-center location-result"></div>
+      </div>
+    </section>
 
     <footer>
       <div class="text-center heading">
@@ -299,6 +321,8 @@
         For All Final Space Lovers
       </div>
     </footer>
+
+    <script src="js/script2.js"></script>
 
     <script>
       https: var scroll = new SmoothScroll('a[href*="#"]', {
