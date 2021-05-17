@@ -149,10 +149,67 @@ img {
   transform: translateY(0);
 }
 
-.social {
+a i {
+  color: #00ff00;
+  margin-top: 5px;
+}
+
+.form {
+  margin-top: 10px;
+}
+
+.form h5 {
+  margin-bottom: 2px;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid #fff;
+  background: #333;
+  width: 20%;
+  padding: 3px;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form button {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+
+.form button:hover {
+  transform: scale(0.98);
+}
+
+.alert {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #fff;
+}
+
+.inline {
   display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+.search-img {
+  display: inline;
+}
+
+.hr {
+  width: 25%;
+}
+
+hr {
+  width: 80%;
 }
 
 footer {
@@ -160,16 +217,19 @@ footer {
   color: #fff;
 }
 
-a i {
-  color: #00ff00;
-  margin-top: 5px;
+.social {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Tablets and under */
 @media (max-width: 768px) {
   .grid,
   .showcase .grid,
-  .characters .grid {
+  .characters .grid,
+  .locations .grid,
+  .search .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -190,6 +250,15 @@ a i {
 
   .showcase {
     background-position: right;
+    height: 30rem;
+  }
+
+  input {
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background: #333;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 }
 
@@ -212,5 +281,32 @@ a i {
     color: #fff;
     padding: 5px;
     margin: 0 5px;
+  }
+
+  .showcase {
+    background-position: right;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 5px;
+    -webkit-text-stroke: 0.2px black;
+    font-size: small;
+  }
+
+  input {
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background: #333;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .search-img img {
+    width: 80%;
+  }
+
+  .search-img h3 {
+    font-size: medium;
   }
 }
