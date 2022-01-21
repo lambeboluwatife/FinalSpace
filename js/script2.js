@@ -1,6 +1,7 @@
 const btn = document.querySelector(".btn");
 const text = document.getElementById("input");
 const locationResult = document.querySelector(".location-result");
+const quoteResult = document.querySelector(".quote-result");
 const searchImage = document.querySelector(".search-img");
 const alert = document.querySelector(".alert");
 
@@ -42,7 +43,39 @@ fetch("https://finalspaceapi.com/api/v0/location/")
     });
   });
 
-btn.addEventListener("click", () => {
+// Get Locations
+fetch("https://finalspaceapi.com/api/v0/quote/")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (quotes) {
+    // console.log(quotes);
+    quotes.forEach((quote) => {
+      const div = document.createElement("div");
+      div.classList.add("quote-card");
+      const image = document.createElement("img");
+      image.src = quote.image;
+
+      div.appendChild(image);
+
+      const textDiv = document.createElement("div");
+      textDiv.classList.add("quote-container", "text-center");
+
+      const name = document.createElement("h3");
+      name.innerHTML = `${quote.by}`;
+      textDiv.appendChild(name);
+
+      const word = document.createElement("p");
+      word.innerHTML = `${quote.quote}`;
+      textDiv.appendChild(word);
+
+      div.appendChild(textDiv);
+      quoteResult.appendChild(div);
+    });
+  });
+
+btn.addEventListener("click", (event) => {
+  event.preventDefault();
   text.addEventListener("focus", () => {
     alert.textContent = "";
     text.value = "";

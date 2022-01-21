@@ -4,6 +4,56 @@
   padding: 0 40px;
 }
 
+.audio-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Muli", sans-serif;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  display: inline;
+}
+
+.panel audio {
+  display: none;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active audio {
+  display: inline;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
 .card {
   background-color: #fff;
   color: #333;
@@ -11,6 +61,26 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 10px;
+}
+
+.quote-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.quote-card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+
+.quote-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.quote-container {
+  padding: 2px 16px;
 }
 
 .flex {
