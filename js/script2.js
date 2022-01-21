@@ -43,7 +43,7 @@ fetch("https://finalspaceapi.com/api/v0/location/")
     });
   });
 
-// Get Locations
+// Get Quotes
 fetch("https://finalspaceapi.com/api/v0/quote/")
   .then(function (res) {
     return res.json();
